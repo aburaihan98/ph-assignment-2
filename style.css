@@ -5,6 +5,10 @@
   padding: 0;
   font-family: "Inter", sans-serif;
 }
+body {
+  background-color: black;
+  color: rgb(255, 255, 255);
+}
 ul,
 li {
   list-style: none;
@@ -19,7 +23,11 @@ section {
 /* section responsive */
 @media screen and (max-width: 576px) {
   section {
-    margin-top: 1rem;
+    width: 90%;
+    margin-top: 4rem;
+  }
+  .change {
+    margin-top: 0;
   }
 }
 .btn-primary {
@@ -35,25 +43,31 @@ section {
   height: 3.3rem;
   font-weight: 600;
   font-size: 1.1rem;
+  color: rgb(255, 255, 255);
   background-color: transparent;
   border-radius: 2rem;
+  border: 1px solid rgb(255, 255, 255);
   margin-left: 0.9rem;
 }
 .section-title {
   font-weight: 900;
   font-size: 2.5rem;
-  padding: 1rem 0;
+  padding-bottom: 1rem;
 }
 .section-description {
-  padding-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.5);
 }
 .text-center {
   text-align: center;
 }
 .border-radius {
-  border-radius: 1rem;
+  border-radius: 1.1rem;
 }
 /* nav section style  */
+.navbar,
+.banner {
+  background-image: linear-gradient(rgb(17, 17, 17) rgba(119, 119, 119, 0));
+}
 .navbar {
   border: 3px solid firebrick;
   width: 80%;
@@ -67,6 +81,7 @@ section {
   font-size: 2.1rem;
 }
 .navbar .nav-links {
+  color: rgb(255, 255, 255);
   display: flex;
   align-items: center;
   gap: 47px;
@@ -74,7 +89,7 @@ section {
 
 .navbar .nav-links .home {
   background-color: rgb(230, 83, 60);
-  border-radius: 8px;
+  border-radius: 1rem;
   padding: 0.5rem 1.2rem;
 }
 
@@ -114,6 +129,7 @@ section {
 .banner .banner-image .btn-tutorial {
   width: 206px;
   height: 96px;
+  color: rgb(250, 250, 249);
   background-color: rgba(48, 48, 48, 0.54);
   border-radius: 8px;
   display: flex;
@@ -133,10 +149,12 @@ section {
 .banner .banner-image .btn-tutorial h6 {
   font-weight: 900;
   font-size: 1.5rem;
+  margin-right: 1.2rem;
 }
 .banner .banner-image .btn-workout {
   width: 193px;
   height: 98px;
+  color: rgb(255, 255, 255);
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 8px;
   position: absolute;
@@ -146,6 +164,7 @@ section {
 .banner .banner-image .btn-workout h6 {
   font-weight: 900;
   font-size: 2.5rem;
+  margin-right: 1.3rem;
 }
 
 /* banner responsive */
@@ -172,10 +191,13 @@ section {
 }
 .change .items {
   border: 3px solid firebrick;
+  margin-top: 3.4rem;
   display: flex;
-  margin: 2rem 0;
+  justify-content: space-around;
 }
 .change .items .item {
+  width: 230px;
+  height: 274px;
   border: 3px solid firebrick;
   display: flex;
   flex-direction: column;
@@ -183,11 +205,11 @@ section {
 }
 .change .items .item img {
   border-radius: 50%;
-  margin: 1rem;
 }
 .change .items .item h6 {
-  padding: 0.5rem;
-  font-size: 1rem;
+  padding: 2rem 0 0.4rem;
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 .change .items .item p {
   text-align: center;
@@ -199,22 +221,27 @@ section {
     border: 3px solid firebrick;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 2rem;
   }
 }
 
 /* run an extra mile easily style */
 .run {
-  width: 74%;
+  box-sizing: border-box;
+  width: 80%;
+  background-color: rgb(34, 34, 34);
   border: 3px solid firebrick;
-  padding: 3%;
+  border-radius: 0.5rem;
+  padding: 2rem;
   display: flex;
-  gap: 5rem;
+  gap: 10rem;
 }
 .run .content {
-  width: 50%;
+  padding: 0.5rem 0 0 1rem;
 }
-.run .image {
-  width: 50%;
+.run .content button {
+  margin: 2rem 0 2.5rem;
 }
 .run .image img {
   width: 100%;
@@ -226,11 +253,10 @@ section {
 @media screen and (max-width: 576px) {
   .run {
     flex-direction: column;
-    gap: 2rem;
+    gap: 0;
   }
-  .run .content,
-  .run .image {
-    width: 100%;
+  .run .content {
+    padding: 0;
   }
   .run .content button {
     width: 100%;
@@ -240,43 +266,50 @@ section {
 /*  bmi calculator style */
 .calculator {
   width: 100%;
-  padding: 0 10%;
-  background-color: #ceafaf;
   box-sizing: border-box;
 }
 .calculator .calculator-content {
-  padding-left: 10%;
+  border: 3px solid firebrick;
+  width: 670px;
+  margin: 0 auto;
 }
 .calculator .calculator-chart-bmi {
+  padding: 3rem 10%;
+  background-color: rgb(34, 34, 34);
   display: flex;
   justify-content: space-between;
+  margin: 5.5rem auto 0;
 }
-.calculator-chart h6 {
-  font-size: 1.6rem;
-  padding: 2rem 0;
+.table-header {
+  font-size: 1.5rem;
+  font-weight: 900;
 }
 .calculator-chart table {
   border: 1px solid rgb(49, 10, 10);
   border-collapse: collapse;
+  margin-top: 3.2rem;
 }
-.calculator-chart td {
-  border: 1px solid rgb(49, 10, 10);
-  padding: 0.5rem;
+.calculator-chart .table thead td {
+  padding: 1rem 1.2rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: rgb(255, 255, 255);
 }
-.calculator-bmi h6 {
-  font-size: 1.6rem;
-  padding: 2rem 0 1rem;
+.calculator-chart .table td {
+  padding: 0.8rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.5);
 }
 .calculator-bmi p {
-  padding-bottom: 1.5rem;
+  padding: 1rem 0 2rem;
 }
 .calculator-bmi .button {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: 0.3rem;
+  gap: 0.8rem;
 }
 .calculator-bmi input {
-  padding: 1rem;
+  padding: 0.8rem 2.5rem 0.8rem 2.5rem;
   border-radius: 0.5rem;
   grid-column: 6 span;
 }
@@ -284,25 +317,31 @@ section {
   grid-column: 12 span;
 }
 .calculator-bmi button {
-  margin: 2rem 0 3rem;
+  margin: 2rem 0 0;
 }
 
 /* calculator responsive */
 @media screen and (max-width: 576px) {
+  .calculator .calculator-content {
+    width: 80%;
+    margin: 0 auto;
+  }
   .calculator .calculator-chart-bmi {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 2.5rem;
   }
 }
 
 /* Meet Our Team style */
 .trainers {
-  height: 550px;
-  padding: 3%;
+  height: 600px;
+  margin-top: 3.5rem;
+  padding: 1.2rem;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: 1rem;
+  gap: 1.2rem;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 .trainer1 {
   background-image: url("images/trainer1.png");
@@ -381,68 +420,118 @@ section {
   }
 }
 
+/* our successful students style */
+.successful-students .students {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 4rem;
+}
+.successful-students .students .student {
+  grid-column: 4 span;
+}
+.successful-students .students .student img {
+  width: 90%;
+  height: 90%;
+  border-radius: 1rem;
+}
+
+@media screen and (max-width: 576px) {
+  .successful-students .students {
+    grid-template-columns: 1fr;
+    gap: 5rem;
+    margin-bottom: 1rem;
+  }
+  .successful-students .students .student img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+  }
+}
+
 /* footer style */
 footer {
   width: 100%;
   margin-top: 6rem;
-  background-color: #312e2e;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 footer .footer-content {
   width: 80%;
   margin: 0 auto;
-  padding: 4rem 0;
+  padding: 4rem 0 5rem;
   display: flex;
 }
-.content-left {
+footer .footer-content .content-left {
   width: 50%;
   border: 2px solid springgreen;
 }
 footer .footer-content .content-left h6 {
-  font-size: 4rem;
+  font-size: 4.4rem;
+  font-weight: 800;
   color: rgb(230, 83, 60);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.3rem;
 }
-footer .footer-content .content-left p {
-  color: white;
-}
+
 footer .footer-content .content-right {
   border: 2px solid springgreen;
   width: 50%;
   display: flex;
   justify-content: space-between;
 }
-footer .footer-content .content-right .get-started h3 {
+footer .footer-content .content-right .get-started {
+  width: 50%;
+}
+footer .footer-content .content-right .get-started h6 {
   border: 2px solid springgreen;
-  color: white;
-  font-size: 2.2rem;
+  font-size: 2rem;
+  font-weight: 700;
   margin-bottom: 2.5rem;
 }
 footer .footer-content .content-right .get-started p {
-  color: hsl(0, 5%, 85%);
   font-size: 1.5rem;
-  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 1.2rem;
+}
+footer .footer-content .content-right .get-started :last-child {
+  margin-bottom: 0;
 }
 footer hr {
   width: 80%;
+  border: 2px solid rgba(255, 255, 255, 0.1);
   margin: 0 auto;
 }
 footer .all {
   text-align: center;
-  padding: 2rem 0;
-  color: wheat;
+  padding: 2.4rem 0;
 }
 
 /* footer responsive */
 @media screen and (max-width: 576px) {
   footer {
-    margin-top: 1rem;
+    margin-top: 4rem;
   }
   footer .footer-content {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 2rem;
   }
   footer .footer-content .content-right {
+    width: 100%;
     flex-direction: column;
+    gap: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .navbar,
+  .banner,
+  .run,
+  .calculator .calculator-content,
+  footer .footer-content {
+    width: 90%;
+    margin-top: 4rem;
+  }
+  .calculator .calculator-chart-bmi {
+    padding: 2rem 5%;
   }
 }
