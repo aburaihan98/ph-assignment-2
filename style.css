@@ -120,11 +120,11 @@ section {
   display: flex;
   flex-direction: column;
   gap: 1.8rem;
-  line-height: 5rem;
 }
 .banner .banner-content h1 {
   font-weight: 900;
   font-size: 5rem;
+  line-height: 5rem;
 }
 .banner .banner-content h1 .shape {
   font-family: "Miama", sans-serif;
