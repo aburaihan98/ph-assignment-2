@@ -83,6 +83,8 @@ section {
 }
 .navbar .nav-links {
   color: rgb(255, 255, 255);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 2.5rem;
   display: flex;
   align-items: center;
   gap: 47px;
@@ -91,6 +93,9 @@ section {
   background-color: rgb(230, 83, 60);
   border-radius: 1rem;
   padding: 0.5rem 1.2rem;
+}
+.navbar .nav-links .about {
+  padding-right: 1.3rem;
 }
 .menu-icon {
   display: none;
