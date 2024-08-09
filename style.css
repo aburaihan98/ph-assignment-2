@@ -112,6 +112,7 @@ section {
   width: 80%;
   margin: 0 auto;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   gap: 87px;
 }
@@ -129,6 +130,7 @@ section {
 .banner .banner-content h1 .shape {
   font-family: "Miama", sans-serif;
   font-size: 9rem;
+  font-weight: 400;
 }
 .banner .banner-image {
   width: 350px;
