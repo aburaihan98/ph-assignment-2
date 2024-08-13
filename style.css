@@ -163,9 +163,11 @@ section {
 .banner .banner-image .btn-tutorial .ball {
   width: 2.5rem;
   height: 2.5rem;
-  margin-top: 0.4rem;
   background-color: rgb(230, 83, 60);
   border-radius: 50%;
+}
+.banner .banner-image .btn-tutorial .btn-content {
+  height: 3.5rem;
 }
 .banner .banner-image .btn-tutorial h6 {
   font-weight: 900;
