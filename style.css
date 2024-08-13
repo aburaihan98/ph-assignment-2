@@ -556,6 +556,7 @@ footer .all {
 /* footer responsive */
 @media screen and (max-width: 576px) {
   footer {
+    border: 3px solid red;
     margin-top: 4rem;
   }
   footer .footer-content {
